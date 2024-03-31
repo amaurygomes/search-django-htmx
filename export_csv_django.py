@@ -21,7 +21,7 @@ def import_csv_to_model(csv_file_path):
             question.save()
 
 
-csv_file_path = 'csv/output/exemplo_out.csv'
+csv_file_path = 'dm_out.csv'
 import_csv_to_model(csv_file_path)
 
 print("Dados importados com sucesso do arquivo CSV para o modelo Question.")
