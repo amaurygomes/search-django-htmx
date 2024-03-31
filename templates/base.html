@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-theme="synthwave" lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/htmx.org@1.9.11"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <title>Codeneiz</title>
+</head>
+
+<body x-data="{ inputValue: '' }">
+  {% include 'components/navbar.html' %}
+
+
+
+
+  <div class="container p-2 flex justify-center">
+
+
+    {% block content %}
+    {% endblock content %}
+
+
+  </div>
+  <div class="p-12"></div>
+  {% include 'components/footer.html' %}
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

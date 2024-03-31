@@ -1,0 +1,23 @@
+<button class="btn btn-block" name="search_clear" hx-get="/search_clear" hx-trigger="click" hx-target="#search-out"
+  x-on:click="inputValue = ''">Limpar</button>
+{% if data %}
+{% for result in data %}
+
+<div role="alert" class="alert">
+  <span>
+    <div class="divider divider-primary">Pergunta</div>
+    <p>{{ result.question_text }}</p>
+    <br>
+    <div class="divider divider-success">Resposta</div>
+    <p class="text-green-500 ">{{ result.answer_text }}</p>
+  </span>
+</div>
+
+{% endfor %}
+{% else %}
+<div role="alert" class="alert">
+  <span>
+    Nenhum resultado encontrado.
+  </span>
+</div>
+{% endif %}
