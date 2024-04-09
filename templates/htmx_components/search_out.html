@@ -1,23 +1,27 @@
-<button class="btn btn-block" name="search_clear" hx-get="/search_clear" hx-trigger="click" hx-target="#search-out"
-  x-on:click="inputValue = ''">Limpar</button>
-{% if data %}
-{% for result in data %}
+<button class="btn btn-block" name="search_clear" hx-get="/search_clear" hx-trigger="click" hx-target="#search-out" x-on:click="inputValue = ''">Limpar</button>
 
-<div role="alert" class="alert">
-  <span>
-    <div class="divider divider-primary">Pergunta</div>
-    <p>{{ result.question_text }}</p>
-    <br>
-    <div class="divider divider-success">Resposta</div>
-    <p class="text-green-500 ">{{ result.answer_text }}</p>
-  </span>
+<div class="mb-16 grid grid-cols-1  gap-12">
+ 
+  {% if data %}
+    {% for result in data %}
+      <div>
+        <span>
+          
+           <div class="divider divider-primary">Pergunta</div>
+          <p class="whitespace-normal md:whitespace-pre-line">{{ result.question_text }}</p>
+          <br>
+          
+
+          <h1>Resposta:</h1><p class="text-green-500 whitespace-normal md:whitespace-pre-line">{{ result.answer_text }}</p>
+        </span>
+      </div>
+    {% endfor %}
+  {% else %}
+    <div role="alert" class="alert">
+      <span>
+        Nenhum resultado encontrado.
+      </span>
+    </div>
+  {% endif %}
 </div>
 
-{% endfor %}
-{% else %}
-<div role="alert" class="alert">
-  <span>
-    Nenhum resultado encontrado.
-  </span>
-</div>
-{% endif %}

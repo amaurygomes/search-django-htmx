@@ -1,10 +1,10 @@
 import csv
 
 
-csv_file_path = 'csv/input/exemplo_prefix.csv'
+csv_file_path = 'Programação_Aplicada_Redes.csv'
 
 
-modified_csv_file_path = 'csv/output/exemplo_out.csv'
+modified_csv_file_path = 'redes_out.csv'
 
 def remove_correct_prefix(csv_input_path, csv_output_path):
     with open(csv_input_path, mode='r', encoding='utf-8') as csvfile, \
