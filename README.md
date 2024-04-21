@@ -25,13 +25,17 @@ Para mais projetos e informações, visite meu site: [amaurygomes.com.br](https:
     ```bash
     git clone https://github.com/amaurygomes/search-django-htmx.git
     ```
+2. **Vá para pasta do app:**
+    ```bash
+    cd search-django-htmx/
+    ```
 
-2. **Construa a imagem Docker:**
+3. **Construa a imagem Docker:**
     ```bash
     docker build -t nome_da_imagem .
     ```
 
-3. **Execute o contêiner:**
+4cd.. **Execute o contêiner:**
     ```bash
     docker run -d -p porta_host:porta_contêiner nome_da_imagem
     ```
