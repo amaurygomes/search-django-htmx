@@ -35,7 +35,7 @@ Para mais projetos e informações, visite meu site: [amaurygomes.com.br](https:
     docker build -t nome_da_imagem .
     ```
 
-4cd.. **Execute o contêiner:**
+4. **Execute o contêiner:**
     ```bash
     docker run -d -p porta_host:porta_contêiner nome_da_imagem
     ```
