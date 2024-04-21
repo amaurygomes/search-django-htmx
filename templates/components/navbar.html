@@ -18,7 +18,7 @@
             
             {% if user.is_authenticated %}
                 <li><a href="{% url 'questions_add' %}">Cadastrar</a></li>
-              
+                <li><a href="{% url 'list_questions' %}">Listar</a></li>
                 
                 <form action="{% url 'logout' %}" method="post">
                   {% csrf_token %}

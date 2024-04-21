@@ -26,4 +26,4 @@ def submit_question(request):
     new_question = Question(question_text=question, answer_text=answer)
     new_question.save()
 
-    return render(request, 'htmx_components/search_empty.html')
+    return render(request, 'htmx_components/success_add.html')

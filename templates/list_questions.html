@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 my-4 mb-16">
+  <h1 class="text-2xl font-bold mb-4">Lista de Perguntas</h1>
+  
+  <!-- Paginação no topo -->
+  <div class="flex justify-between mb-4">
+    {% if questions.has_previous %}
+    <button onclick="location.href='?page={{ questions.previous_page_number }}'" class="btn">Voltar</button>
+    {% else %}
+    <span></span>  <!-- Espaço reservado para manter o alinhamento -->
+    {% endif %}
+    {% if questions.has_next %}
+    <button onclick="location.href='?page={{ questions.next_page_number }}'" class="btn">Avançar</button>
+    {% else %}
+    <span></span>  <!-- Espaço reservado para manter o alinhamento -->
+    {% endif %}
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="table w-full">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Questão</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for question in questions %}
+        <tr>
+          <th>{{ question.id }}</th>
+          <td>{{ question.question_text }}</td>
+          <td>
+            <form action="{% url 'delete_question' question.id %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-error btn-xs">Excluir</button>
+            </form>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="3">Nenhuma questão cadastrada.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

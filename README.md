@@ -39,7 +39,7 @@ Para mais projetos e informações, visite meu site: [amaurygomes.com.br](https:
 ## Acessando a Aplicação
 
 - **Interface Web:** Acesse `localhost:porta_host` em seu navegador para interagir com a aplicação.
-- **Painel Administrativo:** Acesse `localhost:porta_host/painel` para gerenciar as perguntas e respostas.
+- **Painel Administrativo:** Acesse `localhost:porta_host/auth/login/` para gerenciar as perguntas e respostas.
 
 ## Configurações Padrão:
 
