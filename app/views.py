@@ -64,6 +64,6 @@ def upload_csv(request):
 
         
         messages.success(request, 'CSV file has been successfully processed.')
-        return redirect('upload_csv')
+        return redirect('list_questions')
     else:
         return render(request, 'upload_csv.html')
