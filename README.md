@@ -41,6 +41,19 @@ Para mais projetos e informações, visite meu site: [amaurygomes.com.br](https:
 - **Interface Web:** Acesse `localhost:porta_host` em seu navegador para interagir com a aplicação.
 - **Painel Administrativo:** Acesse `localhost:porta_host/auth/login/` para gerenciar as perguntas e respostas.
 
+
+## Importar csv para o sqlite
+
+* O arquivo csv deve conter 2 colunas "Question" e "Correct Answer" para funcionar.
+
+* Será implementado furturamente o upload do csv
+
+* Por enquanto é nessecário executar manualmente, com o container já em execução.
+
+* Lembre se de alterar nome do arquivo csv no export_csv_django.py  
+
+>csv_file_path = 'redes_out.csv'
+
 ## Configurações Padrão:
 
 - **Usuário:** admin
