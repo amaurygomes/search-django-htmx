@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Codeneiz - Compilados">
   <meta property="og:description" content="Este projeto é um sistema de busca para respostas corretas das atividades de Auto Aprendizagem do ambiente Blackboard.">
-  <meta property="og:image" content="blob:https://www.facebook.com/207bb440-95d1-4fbd-b6c0-cbf52a4316a6">
+  <meta property="og:image" content="https://www.example.com/path/to/image.jpg">
+  <meta property="og:image:alt" content="Descrição da Imagem">
   <meta property="article:author" content="https://github.com/amaurygomes">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -16,26 +17,39 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <title>Amaury Gomes</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+    footer {
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 
-<body x-data="{ inputValue: '' }" class="flex flex-col h-screen">
+<body x-data="{ inputValue: '' }" class="flex flex-col min-h-screen">
 
-<header>
- {% include 'components/navbar.html' %}
+<header role="banner">
+  {% include 'components/navbar.html' %}
 </header>
 
-<main>
-  <div class=" flex-grow container mx-12  px-4 lg:px-12 flex justify-center">
+<main role="main" class="flex-grow">
+  <div class="mx-auto px-4 lg:px-12 max-w-full">
     {% block content %}
     {% endblock content %}
   </div>
 </main>
 
-<footer class="fixed bottom-0  w-full p-2 z-10 footer footer-center bg-base-300 text-base-content">
+<footer class="w-full p-2 z-10 footer footer-center bg-base-300 text-base-content" role="contentinfo">
   {% include 'components/footer.html' %}
 </footer>
 
-  
 </body>
-
 </html>

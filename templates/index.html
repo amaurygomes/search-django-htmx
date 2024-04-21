@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<div class="mb-16 artboard artboard-horizontal phone-2 w-full  sm:justify-center">
-
-    {% include 'components/search_input.html' %}
-    {% include 'components/search_base.html' %}
-
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-center min-h-screen w-full">
+    <div class="mb-16 w-full max-w-4xl mx-auto">
+        {% include 'components/search_input.html' %}
+        {% include 'components/search_base.html' %}
+    </div>
 </div>
 
 {% endblock content %}
