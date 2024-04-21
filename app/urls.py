@@ -9,6 +9,7 @@ urlpatterns = [
     path('questions_add', views.questions_add, name='questions_add'),
     path('questions/', views.list_questions, name='list_questions'),
     path('questions/delete/<int:question_id>/', views.delete_question, name='delete_question'),
+    path('upload-csv/', views.upload_csv, name='upload_csv'),
     
 ]
 
