@@ -9,18 +9,19 @@
             excluir questões.</p>
     </div>
     <div class="card shrink-0 w-full lg:max-w-sm shadow-2xl bg-base-100">
-        <form class="card-body">
+        <form class="card-body" method="post">
+            {% csrf_token %}
             <div class="form-control">
-                <label class="label">
+                <label class="label" for="id_username">
                     <span class="label-text">Usuário</span>
                 </label>
-                <input type="text" placeholder="Usuário" class="input input-bordered" required />
+                <input name="username" type="text" placeholder="Usuário" class="input input-bordered" required />
             </div>
             <div class="form-control">
                 <label class="label">
                     <span class="label-text">Senha</span>
                 </label>
-                <input type="password" placeholder="Senha" class="input input-bordered" required />
+                <input name="password" id="password" for="id_password" type="password" placeholder="******" class="input input-bordered" required />
                 <label class="label">
                     <a href="#" class="label-text-alt link link-hover">Esqueceu a senha?</a>
                 </label>

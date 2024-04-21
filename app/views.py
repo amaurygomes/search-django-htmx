@@ -1,5 +1,4 @@
-from django.shortcuts import render
-
+from django.shortcuts import  render
 def index(request):
     return render(request, 'index.html')
 
@@ -8,3 +7,7 @@ def login(request):
 
 def about(request):
     return render(request, 'about.html')
+
+
+def questions_add(request):    
+    return render(request, 'questions_add.html')
